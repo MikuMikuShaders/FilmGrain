@@ -18,7 +18,21 @@ Quickstart:
 * Put the the `FilmGrainController.pmx` to the MMD window
 * Drag the `FilmGrain` to 0.3
 
-Contact :
+Effect Params:
+-----------
+* `FilmGrain` - Controls the noise alpha on the screen.
+* `FilmLineX` - Add scan line on the X-axis of the screen
+* `FilmLineX` - Add scan line on the Y-axis of the screen
+* `FilmBordersX` - Add dark border around X-axis of the screen
+* `FilmBordersY` - Add dark border around Y-axis of the screen
+* `Vignette` - Add dark border around the screen corners
+* `Dispersion` - Controls how much shifting occurs that simulates the color shifts on the screen
+* `DispersionRadius` - Controls how much radius that does not produce this effect in the screen center
+* `FilmLoopX` - tile the texture of the whole screen
+* `FilmLoopX` - tile the texture of the whole screen on the x-axis
+* `FilmLoopY` - tile the texture of the whole screen on the y-axis
+
+Contact:
 ------------
 　　If you are a developer using this as part of your love and considering contacting me, you can submit code by `Pull requests` or Feel free to contact me via `twitter` and `issues`, i'll add your profile to team members.
 
