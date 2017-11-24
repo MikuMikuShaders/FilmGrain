@@ -20,7 +20,7 @@ Quickstart:
 
 Effect Params:
 -----------
-* `FilmGrain` - Controls the noise alpha on the screen.
+* `FilmGrain` - Controls how much intensity that add noise on the screen.
 * `FilmLineX` - Add scan line on the X-axis of the screen
 * `FilmLineX` - Add scan line on the Y-axis of the screen
 * `FilmBordersX` - Add dark border around X-axis of the screen
