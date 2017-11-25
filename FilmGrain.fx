@@ -15,12 +15,12 @@ texture2D DepthBuffer : RENDERDEPTHSTENCILTARGET<
 >;
 sampler ScnSamp = sampler_state {
 	texture = <ScnMap>;
-	MinFilter = POINT;   MagFilter = POINT;   MipFilter = NONE;
+	MinFilter = LINEAR;   MagFilter = LINEAR;   MipFilter = NONE;
 	AddressU  = CLAMP;  AddressV = CLAMP;
 };
 sampler ScnSamp2 = sampler_state {
 	texture = <ScnMap2>;
-	MinFilter = POINT;   MagFilter = POINT;   MipFilter = NONE;
+	MinFilter = LINEAR;   MagFilter = LINEAR;   MipFilter = NONE;
 	AddressU  = WRAP;  AddressV = WRAP;
 };
 sampler NoiseMapSamp = sampler_state
