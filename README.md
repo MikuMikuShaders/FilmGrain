@@ -21,14 +21,16 @@ Quickstart:
 Effect Params:
 -----------
 * `FilmGrain` - Controls how much intensity that add noise on the screen.
-* `FilmLineX` - Add scan line on the X-axis of the screen
-* `FilmLineX` - Add scan line on the Y-axis of the screen
+* `FilmLineX` - Add scan line on the X-axis of the whole screen
+* `FilmLineFadeX` - Controls how much transparency that blending scan line with texture of the whole screen
+* `FilmLineY` - Add scan line on the Y-axis of the whole screen
+* `FilmLineFadeY` - Controls how much transparency that blending scan line with texture of the whole screen
 * `FilmBordersX` - Add dark border around X-axis of the screen
 * `FilmBordersY` - Add dark border around Y-axis of the screen
 * `Vignette` - Add dark border around the screen corners
 * `Dispersion` - Controls how much shifting occurs that simulates the color shifts on the screen
 * `DispersionRadius` - Controls how much radius that does not produce this effect in the screen center
-* `FilmLoopX` - Controls how much loop number that tile the texture of the whole screen
+* `FilmLoop` - Controls how much loop number that tile the texture of the whole screen
 * `FilmLoopX` - Controls how much loop number that tile the texture of the whole screen on the X-axis
 * `FilmLoopY` - Controls how much loop number that tile the texture of the whole screen on the Y-axis
 
