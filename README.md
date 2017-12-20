@@ -1,5 +1,7 @@
 FilmGrain
 ========
+###### 　　[English](https://github.com/MikuMikuShaders/FilmGrain/blob/master/README.md) &nbsp; [中文文档](https://github.com/MikuMikuShaders/FilmGrain/blob/master/README_chs.md)
+
 　　FilmGrain is an image effect for MikuMikuDance, the method is using 3D noise texture to create film grain and be able to solves [color banding](https://en.wikipedia.org/wiki/Colour_banding), this also is a very fast technique to achieve film grain and vignette, dark border, chromatic aberration, etc, it can help to add more realistic and also produces better effect
 
 [![link text](./Screenshots/preview.png)](https://raw.githubusercontent.com/MikuMikuShaders/FilmGrain/master/Screenshots/preview.png)

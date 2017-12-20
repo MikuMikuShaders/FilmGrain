@@ -1,34 +1,3 @@
-texture3D NoiseMap<string ResourceName = "Textures/noise.dds";>; 
-texture2D ScnMap : RENDERCOLORTARGET <
-	float2 ViewPortRatio = {1.0,1.0};
-	bool AntiAlias = false;
-	string Format = "A2R10G10B10";
->;
-texture2D ScnMap2 : RENDERCOLORTARGET <
-	float2 ViewPortRatio = {1.0,1.0};
-	bool AntiAlias = false;
-	string Format = "A2R10G10B10";
->;
-texture2D DepthBuffer : RENDERDEPTHSTENCILTARGET<
-	float2 ViewportRatio = {1.0,1.0};
-	string Format = "D24S8";
->;
-sampler ScnSamp = sampler_state {
-	texture = <ScnMap>;
-	MinFilter = LINEAR;   MagFilter = LINEAR;   MipFilter = NONE;
-	AddressU  = CLAMP;  AddressV = CLAMP;
-};
-sampler ScnSamp2 = sampler_state {
-	texture = <ScnMap2>;
-	MinFilter = LINEAR;   MagFilter = LINEAR;   MipFilter = NONE;
-	AddressU  = WRAP;  AddressV = WRAP;
-};
-sampler NoiseMapSamp = sampler_state
-{
-	texture = NoiseMap;
-	MINFILTER = LINEAR; MAGFILTER = LINEAR; ADDRESSU = WRAP; ADDRESSV = WRAP;
-};
-
 float time : TIME;
 float2 ViewportSize : VIEWPORTPIXELSIZE;
 
@@ -49,6 +18,37 @@ float mFilmBordersY : CONTROLOBJECT<string name="FilmGrainController.pmx"; strin
 float mDispersion : CONTROLOBJECT<string name="FilmGrainController.pmx"; string item = "Dispersion";>;
 float mDispersionRadius : CONTROLOBJECT<string name="FilmGrainController.pmx"; string item = "DispersionRadius";>;
 float mVignette : CONTROLOBJECT<string name="FilmGrainController.pmx"; string item = "Vignette";>;
+
+texture3D NoiseMap<string ResourceName = "Textures/noise.dds";>; 
+texture2D ScnMap : RENDERCOLORTARGET <
+	float2 ViewPortRatio = {1.0,1.0};
+	bool AntiAlias = false;
+	string Format = "A8R8G8B8";
+>;
+texture2D ScnMap2 : RENDERCOLORTARGET <
+	float2 ViewPortRatio = {1.0,1.0};
+	bool AntiAlias = false;
+	string Format = "A8R8G8B8";
+>;
+texture2D DepthBuffer : RENDERDEPTHSTENCILTARGET<
+	float2 ViewportRatio = {1.0,1.0};
+	string Format = "D24S8";
+>;
+sampler ScnSamp = sampler_state {
+	texture = <ScnMap>;
+	MinFilter = LINEAR;   MagFilter = LINEAR;   MipFilter = NONE;
+	AddressU  = CLAMP;  AddressV = CLAMP;
+};
+sampler ScnSamp2 = sampler_state {
+	texture = <ScnMap2>;
+	MinFilter = LINEAR;   MagFilter = LINEAR;   MipFilter = NONE;
+	AddressU  = WRAP;  AddressV = WRAP;
+};
+sampler NoiseMapSamp = sampler_state
+{
+	texture = NoiseMap;
+	MINFILTER = LINEAR; MAGFILTER = LINEAR; ADDRESSU = WRAP; ADDRESSV = WRAP;
+};
 
 float3 Overlay(float3 a, float3 b)
 {
@@ -163,11 +163,11 @@ const float ClearDepth  = 1.0;
 
 technique FimicGrain <
 	string Script = 
-	"RenderColorTarget0=;"
+	"RenderColorTarget=;"
 	"ClearSetColor=ClearColor;"
 	"ClearSetDepth=ClearDepth;"
 	
-	"RenderColorTarget0=ScnMap;"
+	"RenderColorTarget=ScnMap;"
 	"Clear=Color;"
 	"Clear=Depth;"
 	"RenderDepthStencilTarget=DepthBuffer;"
