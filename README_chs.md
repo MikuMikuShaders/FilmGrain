@@ -37,7 +37,7 @@ FilmGrain
 
 联系:
 ------------
-　　如果你是一名热爱图形开发者并且想要贡献一份自己的力量，你可以通过`Pull requests`来提交你的代码，或者加入到我们的团队通过Github的Issue或者twitter
+　　如果你是一名热爱图形的开发者，你可以通过`Pull requests`来提交你的代码，或者通过Github的Issue和twitter来加入到我们的团队
 
 * Twitter: [@Rui](https://twitter.com/Rui_cg).
 
